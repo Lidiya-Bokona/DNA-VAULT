@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('/static/images/index-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Space between title and navbar */
+            align-items: center;
+            margin-top: 20px; /* Space from the top */
+        }
+        .navbar {
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: rgba(0, 0, 0, 0.8);
+            margin-left: 10px; /* Space between buttons */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        .hero-section {
+            text-align: center;
+            margin: 20px 0; /* Add margin to avoid overlap with navbar */
+            padding: 40px;
+            background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+        .hero-section h1 {
+            margin-bottom: 20px;
+        }
+        .hero-section p {
+            margin: 20px 0;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+            margin: 50px 0;
+        }
+        .feature-card {
+            background-color: rgba(0, 0, 0, 0.7); /* Dark background for feature cards */
+            border-radius: 10px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            margin: 0 10px; /* Add margin between cards */
+        }
+        .feature-card:hover {
+            transform: scale(1.05);
+        }
+        .get-started-btn {
+            background-color: #0f5718; /* Distinct green */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .get-started-btn:hover {
+            background-color: #044104;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 5px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column; /* Stack feature cards on smaller screens */
+                align-items: center;
+            }
+            .feature-card {
+                width: 80%; /* Make feature cards wider on small screens */
+                margin: 10px 0; /* Add margin for spacing */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DNA VAULT</h1>
+            <div class="navbar">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('signin') }}">Login</a>
+                <a href="{{ url_for('signup') }}">Sign Up</a>
+            </div>
+        </div>
+        <div class="hero-section">
+            <h1>Welcome to DNA Vault</h1>
+            <p>DNA Vault is a web-based platform revolutionizing data storage using DNA technology. Store and retrieve your digital files securely, accessing them anywhere with an internet connection.</p>
+            <button class="get-started-btn" onclick="window.location.href='{{ url_for('signup') }}'">Get Started</button>
+        </div>
+        <div class="features">
+            <div class="feature-card">
+                <h2>Enhanced Security</h2>
+                <p>Advanced encryption techniques ensuring your data remains protected.</p>
+            </div>
+            <div class="feature-card">
+                <h2>Fast Processing</h2>
+                <p>Quick and efficient data encoding and decoding capabilities.</p>
+            </div>
+            <div class="feature-card">
+                <h2>DNA Storage</h2>
+                <p>Revolutionary DNA-based storage for unprecedented data density.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2025 DNA Vault. All rights reserved.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('active'); // Toggle the active class to show/hide the menu
+        }
+ ```html
+    </script>
+</body>
+</html>

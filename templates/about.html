@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - DNA Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f8f0; /* Light green background */
+            margin: 0;
+            padding: 0;
+            color: #333; /* Dark text for contrast */
+        }
+        h1, h2 {
+            font-family: 'Montserrat', sans-serif;
+            color: #2e7d32; /* Dark green for headings */
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between; /* Space between title and navbar */
+            align-items: center;
+            margin-top: 20px; /* Space from the top */
+        }
+        .navbar {
+            display: flex;
+            align-items: center; /* Center items vertically */
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            background-color: #388e3c; /* Dark green for buttons */
+            margin-left: 10px; /* Space between buttons */
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #66bb6a; /* Lighter green on hover */
+            transform: scale(1.05);
+        }
+        .content {
+            margin-top: 40px;
+            background-color: rgba(255, 255, 255, 0.9); /* White background for content */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #388e3c; /* Dark green for footer */
+            color: white;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>DNA VAULT</h1>
+            <div class="navbar">
+                <a href="{{ url_for('index') }}">Home</a>
+                <a href="{{ url_for('about') }}">About Us</a>
+                <a href="{{ url_for('signin') }}">Login</a>
+                <a href="{{ url_for('signup') }}">Sign Up</a>
+            </div>
+        </div>
+        <div class="content">
+            <h2>The Future of Data Storage</h2>
+            <p>DNA Vault is pioneering the next evolution in data storage. Our groundbreaking technology translates digital information into DNA sequences, offering unprecedented storage density and longevity. We're not just storing data - we're preserving humanity's digital legacy for generations to come.</p>
+
+            <h2>Our Technology</h2>
+            <h3>The Problem</h3>
+            <p>Traditional data storage faces critical challenges: limited capacity, high energy consumption, and hardware degradation. Data centers worldwide struggle with increasing storage demands while trying to minimize environmental impact.</p>
+
+            <h3>Our Solution</h3>
+            <p>DNA Vault's revolutionary technology converts digital data into DNA sequences, achieving unprecedented storage density. One gram of DNA can store 215 petabytes of data - equivalent to over 10,000 standard hard drives.</p>
+
+            <h2>Mission & Values</h2>
+            <h3>Our Mission</h3>
+            <p>To revolutionize data storage by making DNA-based storage technology accessible, secure, and sustainable for organizations worldwide.</p>
+
+            <h3>Sustainability</h3>
+            <p>Environmental responsibility in data storage.</p>
+
+            <h3>Security</h3>
+            <p>Uncompromising data security through advanced encryption and access controls.</p>
+
+            <h3>Innovation</h3>
+            <p>Continuous improvement and adaptation to emerging technologies.</p>
+        </div>
+        <footer>
+            <p>&copy; 2025 DNA Vault. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>

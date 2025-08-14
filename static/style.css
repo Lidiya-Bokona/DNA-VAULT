@@ -1,0 +1,20 @@
+/* General styles for the landing page */
+.landing-page {
+  background-image: url('/static/images/landing.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+  padding: 50px;
+}
+
+/* General styles for the dashboard */
+.dashboard-page {
+  background-image: url('/static/images/dashboard.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+}
